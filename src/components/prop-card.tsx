@@ -42,6 +42,12 @@ export const PropContainer = ({ children }: PropsWithChildren) => {
           {
             y: 0,
             scrollTrigger: {
+              snap: {
+                snapTo: 1,
+                delay: 0.25,
+                duration: { min: 0.25, max: 0.5 },
+                ease: "power1.out",
+              },
               trigger: lastSibling,
               start: "bottom bottom",
               end: () => `+=${node.getBoundingClientRect().height * delayMult}`,
