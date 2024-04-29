@@ -47,7 +47,7 @@ export const DesktopView = () => {
               <br />
               <br />
               With Eatr, you can see ratings for each dish so you know exactly
-              what to add to bag. Perfect for when star ratings just aren't
+              what to add to bag. Perfect for when star ratings just aren&apos;t
               cutting it.
             </p>
           </div>
@@ -60,14 +60,14 @@ export const DesktopView = () => {
             <img src={prop2} alt="the whole crew's favorites image"></img>
           </div>
           <div className="flex flex-col content-center justify-center gap-[28px]">
-            <h2>The whole crew's favorite takeout spots in one place</h2>
+            <h2>The whole crew&apos;s favorite takeout spots in one place</h2>
             <p>
-              Finally - an easy way to catch up with all your friends' food recs
-              without hunting through the group chat.
+              Finally - an easy way to catch up with all your friends&apos; food
+              recs without hunting through the group chat.
               <br />
               <br />
-              Search for whatever you're craving, look up that one friend who
-              just gets your taste or browse reviews from your inner circle.
+              Search for whatever you&apos;re craving, look up that one friend
+              who just gets your taste or browse reviews from your inner circle.
             </p>
           </div>
         </div>
@@ -76,8 +76,8 @@ export const DesktopView = () => {
             <h2>Compare prices across delivery apps and get the best deal</h2>
             <p>
               Let Eatr do the legwork to find you the cheapest price. We compare
-              all the fees and extra costs across delivery apps so you don't
-              have to.
+              all the fees and extra costs across delivery apps so you
+              don&apos;t have to.
             </p>
           </div>
           <div>

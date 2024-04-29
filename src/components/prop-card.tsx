@@ -6,11 +6,11 @@ import { PropsWithChildren, ReactNode, useRef } from "react";
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
 
-type Props = {
+interface Props {
   header: string | ReactNode;
   description: string | ReactNode;
   image: string;
-};
+}
 
 export const PropCard = ({ header, description, image }: Props) => {
   return (
@@ -44,7 +44,7 @@ export const PropContainer = ({ children }: PropsWithChildren) => {
             scrollTrigger: {
               snap: {
                 snapTo: 1,
-                delay: 0.25,
+                delay: 0.125,
                 duration: { min: 0.25, max: 0.5 },
                 ease: "power1.out",
               },
