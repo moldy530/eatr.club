@@ -18,7 +18,14 @@
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 100%;
+}
+
+h2 {
+  font-size: 36px;
   font-style: normal;
   font-weight: 800;
   line-height: 100%;
@@ -42,8 +49,22 @@ h4 {
 
 p {
   font-family: Lato;
-  font-size: 20px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 500;
   line-height: 100%; /* 19.2px */
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  p {
+    font-size: 20px;
+  }
 }

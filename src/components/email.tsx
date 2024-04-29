@@ -1,8 +1,10 @@
 import { Button } from "./button";
 
+const baseText = "Join the waitlist";
+
 export const EmailInput = () => {
   return (
-    <div className="flex w-full flex-row gap-2">
+    <div className="flex w-full flex-col gap-2 md:flex-row">
       <label className="input flex grow items-center gap-2 bg-[#E6E6E6]">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +28,7 @@ export const EmailInput = () => {
           placeholder=" Enter your email to join the waitlist..."
         />
       </label>
-      <Button>Join the waitlist</Button>
+      <Button>{baseText}</Button>
     </div>
   );
 };
