@@ -14,7 +14,7 @@ type Props = {
 
 export const PropCard = ({ header, description, image }: Props) => {
   return (
-    <div className="shadow-prop-card absolute flex h-[760px] flex-col items-center gap-8 rounded-tr-[50px] bg-white p-4 pb-[96px] pt-[72px] text-center">
+    <div className="absolute flex h-[760px] flex-col items-center gap-8 rounded-tr-[50px] bg-white p-4 pb-[96px] pt-[72px] text-center shadow-prop-card">
       <h3 className="font-extrabold">{header}</h3>
       <p className="font-normal">{description}</p>
       <img src={image} width={214}></img>
@@ -37,7 +37,7 @@ export const PropContainer = ({ children }: PropsWithChildren) => {
         gsap.fromTo(
           node,
           {
-            y: 760,
+            y: 760 * delayMult,
           },
           {
             y: 0,
