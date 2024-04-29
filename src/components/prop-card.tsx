@@ -24,6 +24,7 @@ export const PropCard = ({ header, description, image }: Props) => {
 
 export const PropContainer = ({ children }: PropsWithChildren) => {
   const container = useRef<HTMLDivElement>(null);
+  const delayMult = 1.25;
 
   useGSAP(
     () => {
@@ -43,7 +44,7 @@ export const PropContainer = ({ children }: PropsWithChildren) => {
             scrollTrigger: {
               trigger: lastSibling,
               start: "bottom bottom",
-              end: () => `+=${node.getBoundingClientRect().height}`,
+              end: () => `+=${node.getBoundingClientRect().height * delayMult}`,
               scrub: true,
               // will recalculate any function-based tween values on resize/refresh (making it responsive)
               invalidateOnRefresh: true,
@@ -59,7 +60,9 @@ export const PropContainer = ({ children }: PropsWithChildren) => {
         end: () =>
           `+=${Array.from(childNodes.values()).reduce(
             (accum, curr, idx) =>
-              idx > 0 ? accum + curr.getBoundingClientRect().height : accum,
+              idx > 0
+                ? accum + curr.getBoundingClientRect().height * delayMult
+                : accum,
             0,
           )}`,
       });
