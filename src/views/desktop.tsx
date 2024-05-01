@@ -7,11 +7,15 @@ import { EmailInput } from "../components/email";
 import Logo from "../components/logo";
 import { Nav } from "../components/nav";
 
-export const DesktopView = () => {
+interface Props {
+  onSubmit: () => void;
+}
+
+export const DesktopView = ({ onSubmit }: Props) => {
   return (
     <div className="hidden max-w-[1440px] flex-col md:flex">
       {/* nav */}
-      <Nav />
+      <Nav onSuccess={onSubmit} />
       {/* header */}
       <div className="flex flex-row items-center gap-[26px] px-[32px] py-[48px]">
         <div className="flex flex-col gap-[36px] lg:basis-2/4">
@@ -23,7 +27,7 @@ export const DesktopView = () => {
             Eatr finds you friend-recommended takeout for the cheapest possible
             price
           </p>
-          <EmailInput />
+          <EmailInput onSubmit={onSubmit} />
         </div>
         <div className="hidden h-full w-full content-center justify-center lg:flex lg:basis-2/4">
           <div className="h-full w-full">

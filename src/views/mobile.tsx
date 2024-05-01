@@ -6,11 +6,15 @@ import { EmailInput } from "../components/email";
 import { Nav } from "../components/nav";
 import { PropCard, PropContainer } from "../components/prop-card";
 
-export const MobileView = () => {
+interface Props {
+  onSubmit: () => void;
+}
+
+export const MobileView = ({ onSubmit }: Props) => {
   return (
     <div className="flex w-full flex-col md:hidden">
       <Nav />
-      <div className="before:bg-gradient-image relative w-full before:absolute before:left-0 before:top-0 before:h-full before:w-full before:content-['']">
+      <div className="relative w-full before:absolute before:left-0 before:top-0 before:h-full before:w-full before:bg-gradient-image before:content-['']">
         <div className="absolute bottom-0 left-0 flex w-full flex-col gap-4 px-4 py-4">
           <div className="flex flex-col gap-4 text-white">
             <h1>No more dinner indecision.</h1>
@@ -19,7 +23,7 @@ export const MobileView = () => {
               price
             </p>
           </div>
-          <EmailInput />
+          <EmailInput onSubmit={onSubmit} />
         </div>
         <img src={hero} className="h-[560px] w-full object-cover" />
       </div>

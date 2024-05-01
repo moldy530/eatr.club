@@ -47,6 +47,14 @@ h4 {
   line-height: 100%;
 }
 
+h5 {
+  font-family: Lato;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+}
+
 p {
   font-family: Lato;
   font-size: 18px;
@@ -62,6 +70,10 @@ p {
 
   h2 {
     font-size: 40px;
+  }
+
+  h3 {
+    font-size: 28px;
   }
 
   p {
