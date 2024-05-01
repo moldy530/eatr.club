@@ -27,7 +27,7 @@ export const DesktopView = ({ onSubmit }: Props) => {
             Eatr finds you friend-recommended takeout for the cheapest possible
             price
           </p>
-          <EmailInput onSubmit={onSubmit} />
+          <EmailInput onSubmit={onSubmit} direction="row" />
         </div>
         <div className="hidden h-full w-full content-center justify-center lg:flex lg:basis-2/4">
           <div className="h-full w-full">
