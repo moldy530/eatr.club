@@ -28,9 +28,9 @@ jobs:
       - name: Build
         run: yarn build
 
-      # - uses: FirebaseExtended/action-hosting-deploy@v0
-      #   with:
-      #     repoToken: ${{ secrets.GITHUB_TOKEN }}
-      #     firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_DEV_EATR_CLUB }}
-      #     channelId: live
-      #     projectId: dev-eatr-club
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_DEV_EATR_CLUB }}
+          channelId: live
+          projectId: dev-eatr-club
